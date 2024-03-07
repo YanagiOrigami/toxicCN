@@ -53,10 +53,10 @@ def convert_label(preds):
 if __name__ == '__main__':
     # dataset = 'TOC'  # 数据集
     dataset = "ToxiCN"
-    model_name = "warmbody/albert-Chinese-bilstm"
+    # model_name = "warmbody/albert-Chinese-bilstm"
     # model_name = "bert-base-chinese"
     # model_name = "hfl/chinese-roberta-wwm-ext"
-    # model_name = "junnyu/ChineseBERT-base"
+    model_name = "junnyu/ChineseBERT-base"
 
     np.random.seed(1)
     torch.manual_seed(1)
