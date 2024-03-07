@@ -21,8 +21,9 @@ import os
 
 
 def train(config, train_iter, dev_iter, test_iter, task=1):
-    # embed_model = Bert_Layer(config).to(config.device)
-    embed_model = BiLSTM(config).to(config.device)
+    embed_model = Bert_Layer(config).to(config.device)
+    # embedding_weight = FUCK U!
+    # embed_model = BiLSTM(config, embedding_weight).to(config.device)
     model = TwoLayerFFNNLayer(config).to(config.device)
     model_name = '{}-NN_ML-{}_D-{}_B-{}_E-{}_Lr-{}_aplha-{}'.format(config.model_name, config.pad_size, config.dropout, 
                                             config.batch_size, config.num_epochs, config.learning_rate, config.alpha1)
