@@ -118,8 +118,8 @@ def eval(config, embed_model, model, loss_fn, dev_iter, data_name='DEV'):
 
             logit = logit.cpu()
             # label = args['toxic']
-            label = args['toxic_type']
-            # label = args['expression']
+            # label = args['toxic_type']
+            label = args['expression']
             # label = args['target']
             loss = loss_fn(logit, label.float())
             pred = get_preds(config, logit)  
