@@ -53,12 +53,12 @@ def train(config, train_iter, dev_iter, test_iter, task=1):
 
             # label = args['toxic']
             # label = args['toxic_type']
-            # label = args['expression']
-            label = args['target']
+            label = args['expression']
+            # label = args['target']
             loss = loss_fn(logit, label.float())
             # pred = get_preds(config, logit)  
-            # pred = get_preds_task2_4(config, logit)  
-            pred = get_preds_task3(config, logit)  
+            pred = get_preds_task2_4(config, logit)  
+            # pred = get_preds_task3(config, logit)  
             preds.extend(pred)
             labels.extend(label.detach().numpy())
 
@@ -119,12 +119,12 @@ def eval(config, embed_model, model, loss_fn, dev_iter, data_name='DEV'):
             logit = logit.cpu()
             # label = args['toxic']
             # label = args['toxic_type']
-            # label = args['expression']
-            label = args['target']
+            label = args['expression']
+            #label = args['target']
             loss = loss_fn(logit, label.float())
             #pred = get_preds(config, logit)  
-            #pred = get_preds_task2_4(config, logit)  
-            pred = get_preds_task3(config, logit)  
+            pred = get_preds_task2_4(config, logit)  
+            #pred = get_preds_task3(config, logit)  
             preds.extend(pred)
             labels.extend(label.detach().numpy())
             loss_all += loss.item()
