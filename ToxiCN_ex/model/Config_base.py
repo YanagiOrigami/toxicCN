@@ -36,8 +36,8 @@ class Config_base(object):
         # dataset
         self.seed = 1        
         # self.require_improvement = 1000                                 # 若超过1000batch效果还没提升，则提前结束训练 transformer:2000
-        self.num_classes = 2                                             # 类别数
-        #self.num_classes = 5
+        #self.num_classes = 2                                             # 类别数
+        self.num_classes = 5
         #self.num_classes = 3  
         
         # self.n_vocab = 0                                                # 词表大小，在运行时赋值
